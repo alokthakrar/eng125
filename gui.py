@@ -93,7 +93,7 @@ def get_gemini_response(user_input):
     add_speech_bubble(bot_message, "#868787", "w")  # Gemini response (left aligned)
 
 def add_speech_bubble(message, color, anchor):
-    """Create a speech bubble for the given message."""
+    #Create a speech bubble for the given message.
     # Frame for each bubble
     bubble_frame = tk.Frame(chat_frame, bg=color, bd=2, relief=tk.RIDGE, highlightbackground="white", highlightthickness=2)
     bubble_frame.pack(anchor=anchor, padx=10, pady=5, fill=tk.X, expand=True)
@@ -108,11 +108,11 @@ def add_speech_bubble(message, color, anchor):
     chat_canvas.yview_moveto(1.0)
 
 def on_configure(event):
-    """Update the scroll region to encompass the chat frame."""
+    #Update the scroll region to encompass the chat frame.
     chat_canvas.configure(scrollregion=chat_canvas.bbox("all"))
 
 def on_mousewheel(event):
-    """Enable scrolling with mouse wheel."""
+    #Enable scrolling with mouse wheel.
     chat_canvas.yview_scroll(-1 * (event.delta // 120), "units")
 
 # Main window
